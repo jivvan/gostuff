@@ -98,7 +98,7 @@ func buildGame() (*game, error) {
 	}
 	words := strings.Split(string(fcontent), "\n")
 	wordle := game{
-		answer:     words[rand.Intn(12974)],
+		answer:     words[rand.Intn(len(words))],
 		trialsLeft: TRIALS,
 		dictionary: words,
 	}
